@@ -4195,3 +4195,103 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 199ms (Views: 197.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-07 13:08:14 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (132.6ms)
+  Rendered posts/new.html.erb within layouts/application (146.5ms)
+Completed 200 OK in 2100ms (Views: 2027.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-11-07 13:08:25 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ATX1iGaFoEsjP2PnOZzKIvZwq+yUkjG2aCC0exB7Q49ls4Be76WMFsCroNsNqCr+BYBHn9YENEPq01N7PTI6Cw==", "post"=>{"title"=>"123", "summary"=>"123123", "body"=>"123123123"}, "commit"=>"Сохранить"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mPost Create (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "123"], ["summary", "123123"], ["body", "123123123"], ["created_at", "2018-11-07 11:08:25.253343"], ["updated_at", "2018-11-07 11:08:25.253343"]]
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (252.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 271ms (ActiveRecord: 255.0ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2018-11-07 13:08:25 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 430ms (Views: 162.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-07 13:08:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ /home/dkdottk/.gem/ruby/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered collection of posts/_post.html.erb [2 times] (2.9ms)
+  Rendered posts/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 250ms (Views: 221.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-07 13:27:19 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (4.9ms)
+  Rendered posts/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 19711ms (Views: 19669.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-07 13:27:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (8.9ms)
+  Rendered posts/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 315ms (Views: 309.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2018-11-07 13:27:43 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 164ms (Views: 146.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/posts/16" for 127.0.0.1 at 2018-11-07 13:27:47 +0200
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kH9UUGVxeMJ0+PpNvBaiR1ui2rTwW3hqdukxSw4SOiH0+SGG7FFUn5dsOXGIIkKbqFI2x7LNfZ/0GtZLI1tDpQ==", "id"=>"16"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:44
+  [1m[36mPost Destroy (97.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/posts_controller.rb:44
+  [1m[35m (79.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:44
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 195ms (ActiveRecord: 177.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-07 13:27:48 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [1 times] (3.3ms)
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 166ms (Views: 163.2ms | ActiveRecord: 0.5ms)
+
+
