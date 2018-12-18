@@ -5841,3 +5841,1556 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 8840ms (Views: 8834.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:11:15 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (6.9ms)
+  Rendered posts/index.html.erb within layouts/application (92.0ms)
+Completed 500 Internal Server Error in 9091ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (ExecJS::RubyRacerRuntime is not supported. Please replace therubyracer with mini_racer in your Gemfile or use Node.js as ExecJS runtime.):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___563598705226145243_47326088214480'
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:14:16 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (5.7ms)
+  Rendered posts/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 7657ms (Views: 7627.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-17 20:14:33 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (28.6ms)
+  Rendered posts/edit.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 165ms (Views: 148.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-17 20:17:44 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (5.3ms)
+  Rendered posts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 152ms (Views: 149.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 02:32:17 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (7.1ms)
+  Rendered posts/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 11012ms (Views: 10983.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:32:31 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (22.6ms)
+  Rendered posts/edit.html.erb within layouts/application (31.6ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    23: 
+    24:     <div class = "form-group">
+    25:         <%= f.label  :body %>
+    26:         <%= f.trix_editor :body, class: 'editor' %>
+    27:     </div>
+    28: 
+    29:     <div class = "form-group">
+  
+app/views/posts/_form.html.erb:26:in `block in _app_views_posts__form_html_erb__4203681834885261804_70068723189660'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb__4203681834885261804_70068723189660'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb___4609849519875162294_70068723208120'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:38:36 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.5ms)
+  Rendered posts/edit.html.erb within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    23: 
+    24:     <div class = "form-group">
+    25:         <%= f.label  :body %>
+    26:         <%= f.trix_editor :body, class: 'editor' %>
+    27:     </div>
+    28: 
+    29:     <div class = "form-group">
+  
+app/views/posts/_form.html.erb:26:in `block in _app_views_posts__form_html_erb__775451572242786214_47343336175960'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb__775451572242786214_47343336175960'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__4611505758523930278_47343337759760'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:39:54 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (567.2ms)
+  Rendered posts/edit.html.erb within layouts/application (574.2ms)
+Completed 500 Internal Server Error in 635ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `trix_editor' for #<ActionView::Helpers::FormBuilder:0x000055edf8c35668>):
+    23: 
+    24:     <div class = "form-group">
+    25:         <%= f.label  :body %>
+    26:         <%= f.trix_editor :body, class: 'editor' %>
+    27:     </div>
+    28: 
+    29:     <div class = "form-group">
+  
+app/views/posts/_form.html.erb:26:in `block in _app_views_posts__form_html_erb___176890515046120100_47240285136900'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb___176890515046120100_47240285136900'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb___4583805523719324973_47240286799520'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:43:24 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (16.4ms)
+  Rendered posts/edit.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 769ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix' with type 'text/css'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2909891305167710719_46997304051500'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:45:25 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (469.2ms)
+  Rendered posts/edit.html.erb within layouts/application (475.7ms)
+Completed 500 Internal Server Error in 536ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x000056500d999540>):
+    24:     <div class = "form-group">
+    25:         <%= f.label  :body %>
+    26:         
+    27:         <%= f.input :body, as: :trix_editor %>
+    28:     </div>
+    29: 
+    30:     <div class = "form-group">
+  
+app/views/posts/_form.html.erb:27:in `block in _app_views_posts__form_html_erb__2053707662596697026_47450913232120'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb__2053707662596697026_47450913232120'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__2406543936308424291_47450914412800'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:50:59 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (42.5ms)
+  Rendered posts/edit.html.erb within layouts/application (46.0ms)
+Completed 500 Internal Server Error in 701ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix' with type 'text/css'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3606216522709153450_47450920990320'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:55:43 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.7ms)
+  Rendered posts/edit.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ort "bootstrap"": expected "{", was ";"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3606216522709153450_69925456636260'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:55:57 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (16.3ms)
+  Rendered posts/edit.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix' with type 'text/css'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3606216522709153450_69925437064060'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:56:12 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.1ms)
+  Rendered posts/edit.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix-rails' with type 'text/css'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3606216522709153450_69925437558180'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 02:57:58 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (472.5ms)
+  Rendered posts/edit.html.erb within layouts/application (486.6ms)
+Completed 500 Internal Server Error in 547ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `trix_editor' for #<ActionView::Helpers::FormBuilder:0x00005623c884c4b0>):
+    23: 
+    24:     <div class = "form-group">
+    25:         <%= f.label  :body %>
+    26:         <%= f.trix_editor :body, autofocus: true, data: { coffee: :delicious } %>
+    27:     </div>
+    28: 
+    29:     <div class = "form-group">
+  
+app/views/posts/_form.html.erb:26:in `block in _app_views_posts__form_html_erb___2071939288015125115_47355844220360'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb___2071939288015125115_47355844220360'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb___1979374083945219179_47355845792640'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:07:53 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (62.8ms)
+  Rendered posts/edit.html.erb within layouts/application (65.8ms)
+Completed 500 Internal Server Error in 623ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix' with type 'text/css'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2856681709613390857_47355862634120'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:08:32 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (17.5ms)
+  Rendered posts/edit.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 8436ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'trix' with type 'application/javascript'
+Checked in these paths: 
+  /home/dkdottk/dev/rails/blog/app/assets/config
+  /home/dkdottk/dev/rails/blog/app/assets/images
+  /home/dkdottk/dev/rails/blog/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/app/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/assets/compiled
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/dkdottk/dev/rails/blog/node_modules
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/popper_js-1.14.5/assets/javascripts
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets
+  /home/dkdottk/dev/rails/blog/vendor/ruby/2.5.0/gems/bootstrap-4.1.3/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2856681709613390857_70163294747320'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:09:02 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.3ms)
+  Rendered posts/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 648ms (Views: 640.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateTags (20181218011035)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181218011035_create_tags.rb:3
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181218011035_create_tags.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181218011035"]]
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (137.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateTaggings (20181218011143)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "taggings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2c662e858e"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+, CONSTRAINT "fk_rails_9fcd2e236b"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+)[0m
+  ↳ db/migrate/20181218011143_create_taggings.rb:3
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX "index_taggings_on_post_id" ON "taggings" ("post_id")[0m
+  ↳ db/migrate/20181218011143_create_taggings.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  ↳ db/migrate/20181218011143_create_taggings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181218011143"]]
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (122.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dkdottk/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:17:42 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :througth. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:21:55 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :througth. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:22:18 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :througth. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:22:42 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :througth. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:24:03 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :throught. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:25:04 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :throught. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/post.rb:5:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:25:21 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (187.7ms)
+  Rendered posts/edit.html.erb within layouts/application (196.1ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 11.9ms)
+
+
+  
+ActionView::Template::Error (Unknown key: :througth. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+    28: 
+    29:     <div class = "form-group">
+    30:         <%= f.label  :title %>
+    31:         <%= f.text_field :all_tags, class: 'form-control' %>
+    32:     </div>
+    33: 
+    34:     <div class = "form-group">
+  
+app/models/tag.rb:4:in `<class:Tag>'
+app/models/tag.rb:1:in `<main>'
+app/models/post.rb:10:in `all_tags'
+app/views/posts/_form.html.erb:31:in `block in _app_views_posts__form_html_erb___4228808799055111585_47236524319060'
+app/views/posts/_form.html.erb:13:in `_app_views_posts__form_html_erb___4228808799055111585_47236524319060'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__869323045167545190_47236524560400'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:25:37 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (7.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (105.3ms)
+  Rendered posts/edit.html.erb within layouts/application (107.9ms)
+Completed 200 OK in 1318ms (Views: 1249.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:25:52 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dkdottk/dev/rails/blog/app/models/post.rb:5: syntax error, unexpected ':', expecting keyword_end
+    has_many :tags, :through :taggings
+                             ^):
+  
+app/models/post.rb:5: syntax error, unexpected ':', expecting keyword_end
+app/controllers/posts_controller.rb:52:in `set_post'
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:25:57 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (49.4ms)
+  Rendered posts/edit.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 333ms (Views: 275.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 03:27:07 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (27.4ms)
+  Rendered posts/edit.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 255ms (Views: 245.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:27:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (9.7ms)
+  Rendered posts/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 192ms (Views: 186.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-12-18 03:27:48 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.2ms)
+  Rendered posts/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 177ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-12-18 03:28:29 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cWei7QGjfpJbW196yVhEB8b5DGtTCDedCinVwBP9QJJh+OlSPc4fY0G7nsP0sNgEmaixlYmravlcBEA9cJNqJg==", "post"=>{"title"=>"FrontEnd", "summary"=>"JS", "body"=>"JavaScript", "all_tags"=>"backend, ruby"}, "commit"=>"Создать статью"}
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "backend"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[36mTag Create (7.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "backend"], ["created_at", "2018-12-18 01:28:29.842453"], ["updated_at", "2018-12-18 01:28:29.842453"]]
+  ↳ app/models/post.rb:15
+  [1m[35m (175.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "ruby"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[36mTag Create (5.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "ruby"], ["created_at", "2018-12-18 01:28:30.038931"], ["updated_at", "2018-12-18 01:28:30.038931"]]
+  ↳ app/models/post.rb:15
+  [1m[35m (91.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (10.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "FrontEnd"], ["summary", "JS"], ["body", "JavaScript"], ["created_at", "2018-12-18 01:28:30.224372"], ["updated_at", "2018-12-18 01:28:30.224372"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mTagging Create (1.8ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 25], ["tag_id", 1], ["created_at", "2018-12-18 01:28:30.241235"], ["updated_at", "2018-12-18 01:28:30.241235"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mTagging Create (0.4ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 25], ["tag_id", 2], ["created_at", "2018-12-18 01:28:30.252069"], ["updated_at", "2018-12-18 01:28:30.252069"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (134.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+Redirected to http://localhost:3000/posts/25
+Completed 302 Found in 585ms (ActiveRecord: 430.8ms)
+
+
+Started GET "/posts/25" for 127.0.0.1 at 2018-12-18 03:28:30 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 231ms (Views: 222.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/25/edit" for 127.0.0.1 at 2018-12-18 03:28:41 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (21.7ms)
+  Rendered posts/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 248ms (Views: 241.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/25" for 127.0.0.1 at 2018-12-18 03:29:44 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 395ms (Views: 263.0ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/posts/25/edit" for 127.0.0.1 at 2018-12-18 03:29:47 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (119.3ms)
+  Rendered posts/edit.html.erb within layouts/application (276.2ms)
+Completed 200 OK in 513ms (Views: 499.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:29:49 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [3 times] (13.9ms)
+  Rendered posts/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 319ms (Views: 316.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:30:33 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [3 times] (12.2ms)
+  Rendered posts/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 253ms (Views: 250.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:33:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (6.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (489.7ms)
+  Rendered posts/index.html.erb within layouts/application (508.2ms)
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `tag_path' for #<#<Class:0x00007fdeed9f64a0>:0x00007fdeed303058>):
+    16:     </section>
+    17: 
+    18:     <section class = "footer-summary">
+    19:         <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ') %>
+    20:     </section>
+    21: 
+    22: </article>
+  
+app/views/posts/_post.html.erb:19:in `block in _app_views_posts__post_html_erb___1590243402194814743_70297719382980'
+app/views/posts/_post.html.erb:19:in `map'
+app/views/posts/_post.html.erb:19:in `_app_views_posts__post_html_erb___1590243402194814743_70297719382980'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___3362220334755607800_70297719413980'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:37:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (3.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (114.9ms)
+  Rendered posts/index.html.erb within layouts/application (150.4ms)
+Completed 200 OK in 430ms (Views: 400.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:39:19 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (33.7ms)
+  Rendered posts/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 198ms (Views: 190.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:39:33 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (45.3ms)
+  Rendered posts/index.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 281ms (Views: 273.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tags/ruby" for 127.0.0.1 at 2018-12-18 03:39:39 +0200
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"ruby"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "ruby"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+Completed 406 Not Acceptable in 83ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (TagsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/abstract_controller/base.rb:194:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/callbacks.rb:132:in `run_callbacks'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/notifications.rb:168:in `instrument'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/abstract_controller/base.rb:134:in `process'
+vendor/ruby/2.5.0/gems/actionview-5.2.2/lib/action_view/rendering.rb:32:in `process'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/etag.rb:25:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/conditional_get.rb:25:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/head.rb:12:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/migration.rb:559:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/ruby/2.5.0/gems/railties-5.2.2/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/ruby/2.5.0/gems/railties-5.2.2/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/ruby/2.5.0/gems/railties-5.2.2/lib/rails/rack/logger.rb:26:in `call'
+vendor/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/method_override.rb:22:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/runtime.rb:22:in `call'
+vendor/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/ruby/2.5.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/ruby/2.5.0/gems/rack-2.0.6/lib/rack/sendfile.rb:111:in `call'
+vendor/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:524:in `call'
+vendor/ruby/2.5.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/ruby/2.5.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/ruby/2.5.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/ruby/2.5.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/ruby/2.5.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:39:42 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (23.4ms)
+  Rendered posts/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 192ms (Views: 188.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:39:59 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (37.5ms)
+  Rendered posts/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 259ms (Views: 253.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:40:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (21.6ms)
+  Rendered posts/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 243ms (Views: 229.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:41:16 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (34.6ms)
+  Rendered posts/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 260ms (Views: 256.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:41:26 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (17.8ms)
+  Rendered posts/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 166ms (Views: 162.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:41:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (34.9ms)
+  Rendered posts/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 274ms (Views: 270.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:45:16 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (30.2ms)
+  Rendered posts/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 246ms (Views: 242.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tags/backend" for 127.0.0.1 at 2018-12-18 03:45:21 +0200
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"backend"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "backend"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 1], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [1 times] (17.2ms)
+  Rendered tags/show.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 231ms (Views: 224.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 03:45:26 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (31.1ms)
+  Rendered posts/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 248ms (Views: 244.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:02:16 +0200
+  
+SyntaxError (/home/dkdottk/dev/rails/blog/app/helpers/posts_helper.rb:6: syntax error, unexpected '}', expecting =>
+... max.count * {classes.size - 1}
+...                              ^):
+  
+app/helpers/posts_helper.rb:6: syntax error, unexpected '}', expecting =>
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/posts_controller.rb:1:in `<main>'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:02:48 +0200
+  
+TypeError (wrong argument type Class (expected Module)):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/posts_controller.rb:1:in `<main>'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:03:22 +0200
+  
+SyntaxError (/home/dkdottk/dev/rails/blog/app/helpers/posts_helper.rb:11: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/posts_helper.rb:11: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/posts_controller.rb:1:in `<main>'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:03:31 +0200
+  
+RuntimeError (Circular dependency detected while autoloading constant PostsHelper):
+  
+app/helpers/posts_helper.rb:1:in `<main>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/posts_controller.rb:1:in `<main>'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:03:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [3 times] (14.5ms)
+  Rendered posts/index.html.erb within layouts/application (72.9ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 2.7ms)
+
+
+  
+SyntaxError (/home/dkdottk/dev/rails/blog/app/models/tag.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...name, count(taggings.tag_id) as count*).joins(:taggings).gro...
+...                             ^~
+/home/dkdottk/dev/rails/blog/app/models/tag.rb:8: syntax error, unexpected ')'
+...unt(taggings.tag_id) as count*).joins(:taggings).group("tagg...
+...                              ^):
+  
+app/models/tag.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/models/tag.rb:8: syntax error, unexpected ')'
+app/views/posts/_post.html.erb:19:in `_app_views_posts__post_html_erb___1590243402194814743_70297744410980'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___3362220334755607800_70298046915500'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:05:57 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [3 times] (15.1ms)
+  Rendered posts/index.html.erb within layouts/application (43.0ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 2.3ms)
+
+
+  
+SyntaxError (/home/dkdottk/dev/rails/blog/app/models/tag.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...name, count(taggings.tag_id) as count*).joins(:taggings).gro...
+...                             ^~
+/home/dkdottk/dev/rails/blog/app/models/tag.rb:8: syntax error, unexpected ')'
+...unt(taggings.tag_id) as count*).joins(:taggings).group("tagg...
+...                              ^
+/home/dkdottk/dev/rails/blog/app/models/tag.rb:9: syntax error, unexpected keyword_end, expecting ')'
+  end
+  ^~~):
+  
+app/models/tag.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/models/tag.rb:8: syntax error, unexpected ')'
+app/models/tag.rb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/_post.html.erb:19:in `_app_views_posts__post_html_erb___1590243402194814743_70298046926500'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___3362220334755607800_70298047239660'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:07:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (94.0ms)
+  Rendered posts/index.html.erb within layouts/application (119.3ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 500 Internal Server Error in 10620ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `ling_to' for #<#<Class:0x00007fdf143af408>:0x00007fdee40b1a60>):
+    47:     <div class = "raw">
+    48:       <div class = "col-md-4">
+    49:         <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class|%>
+    50:           <%= ling_to tag.name, tag_path(tag.name), class: css_class %>
+    51:         <% end %>
+    52:       </div>
+    53:     </div>
+  
+app/views/layouts/application.html.erb:50:in `block in _app_views_layouts_application_html_erb__560591979718246397_70297744376780'
+app/helpers/posts_helper.rb:7:in `block in tag_cloud'
+app/helpers/posts_helper.rb:5:in `tag_cloud'
+app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__560591979718246397_70297744376780'
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:08:35 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (42.5ms)
+  Rendered posts/index.html.erb within layouts/application (52.8ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 327ms (Views: 322.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:08:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (23.9ms)
+  Rendered posts/index.html.erb within layouts/application (31.5ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 189ms (Views: 182.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tags/backend" for 127.0.0.1 at 2018-12-18 04:08:46 +0200
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"backend"}
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "backend"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 1], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [1 times] (9.0ms)
+  Rendered tags/show.html.erb within layouts/application (25.2ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 230ms (Views: 218.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:08:49 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [3 times] (18.6ms)
+  Rendered posts/index.html.erb within layouts/application (32.6ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 236ms (Views: 227.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-12-18 04:08:52 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.4ms)
+  Rendered posts/new.html.erb within layouts/application (18.8ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 199ms (Views: 193.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-12-18 04:09:03 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XUekbpB995HaGDSHvNYz9ab6JTMt85ilxwNbXGEFo41N2O/RrBCWYMD49T6BPq/2+auYzfdQxcGRLs6hAmuJOQ==", "post"=>{"title"=>"asd", "summary"=>"asd", "body"=>"asd", "all_tags"=>"ruby, html"}, "commit"=>"Создать статью"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "ruby"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "html"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[36mTag Create (4.8ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "html"], ["created_at", "2018-12-18 02:09:03.068436"], ["updated_at", "2018-12-18 02:09:03.068436"]]
+  ↳ app/models/post.rb:15
+  [1m[35m (201.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/post.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mPost Create (3.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "asd"], ["summary", "asd"], ["body", "asd"], ["created_at", "2018-12-18 02:09:03.324007"], ["updated_at", "2018-12-18 02:09:03.324007"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mTagging Create (0.8ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 26], ["tag_id", 2], ["created_at", "2018-12-18 02:09:03.343338"], ["updated_at", "2018-12-18 02:09:03.343338"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[36mTagging Create (0.9ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 26], ["tag_id", 3], ["created_at", "2018-12-18 02:09:03.351802"], ["updated_at", "2018-12-18 02:09:03.351802"]]
+  ↳ app/controllers/posts_controller.rb:22
+  [1m[35m (104.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:22
+Redirected to http://localhost:3000/posts/26
+Completed 302 Found in 418ms (ActiveRecord: 321.3ms)
+
+
+Started GET "/posts/26" for 127.0.0.1 at 2018-12-18 04:09:03 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 373ms (Views: 359.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/26" for 127.0.0.1 at 2018-12-18 04:09:50 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 179ms (Views: 173.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/26" for 127.0.0.1 at 2018-12-18 04:10:03 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (8.0ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 235ms (Views: 227.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/26" for 127.0.0.1 at 2018-12-18 04:10:18 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 235ms (Views: 222.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:10:23 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (5.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (44.9ms)
+  Rendered posts/index.html.erb within layouts/application (54.5ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 227ms (Views: 217.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:10:37 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (38.1ms)
+  Rendered posts/index.html.erb within layouts/application (42.7ms)
+  [1m[36mTag Load (4.1ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 274ms (Views: 264.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:10:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (39.6ms)
+  Rendered posts/index.html.erb within layouts/application (53.0ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 235ms (Views: 229.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:10:42 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (34.2ms)
+  Rendered posts/index.html.erb within layouts/application (46.8ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 273ms (Views: 268.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 04:10:47 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (20.2ms)
+  Rendered posts/edit.html.erb within layouts/application (23.2ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 207ms (Views: 199.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/23/edit" for 127.0.0.1 at 2018-12-18 04:11:01 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/models/post.rb:10
+  Rendered posts/_form.html.erb (17.1ms)
+  Rendered posts/edit.html.erb within layouts/application (19.9ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 239ms (Views: 232.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:11:06 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (32.9ms)
+  Rendered posts/index.html.erb within layouts/application (44.4ms)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 202ms (Views: 194.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:11:53 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (8.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (53.8ms)
+  Rendered posts/index.html.erb within layouts/application (60.2ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 269ms (Views: 256.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:11:55 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (43.9ms)
+  Rendered posts/index.html.erb within layouts/application (53.2ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 261ms (Views: 252.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:11:57 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (54.2ms)
+  Rendered posts/index.html.erb within layouts/application (73.0ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 264ms (Views: 259.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-12-18 04:12:21 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 23]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 24]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 25]]
+  ↳ app/views/posts/_post.html.erb:19
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 26]]
+  ↳ app/views/posts/_post.html.erb:19
+  Rendered collection of posts/_post.html.erb [4 times] (38.8ms)
+  Rendered posts/index.html.erb within layouts/application (48.3ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY taggings.tag_id[0m
+  ↳ app/helpers/posts_helper.rb:4
+Completed 200 OK in 250ms (Views: 245.3ms | ActiveRecord: 2.2ms)
+
+

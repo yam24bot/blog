@@ -14,5 +14,10 @@
 
         <%= post.summary %>
     </section>
+
+    <section class = "badge">
+        <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'tag tag-primary'}.join(' ') %>
+    </section>
+
 </article>
 
